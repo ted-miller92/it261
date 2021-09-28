@@ -1,0 +1,9 @@
+/* Styles for portal page */
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background:lightgrey;
+}

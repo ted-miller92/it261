@@ -8,3 +8,71 @@
 body {
     background: beige;
 }
+header {
+    background: yellow;
+    overflow:hidden;
+}
+nav {
+    height:50px;
+    float:right;
+}
+nav ul {
+    float:right;
+}
+nav li {
+    float: left;
+    list-style-type: none;
+    margin-left:30px;
+}
+nav a {
+    text-decoration:none;
+    color:black;
+}
+.header-inner {
+    max-width:1100px;
+    margin: 20px auto;
+}
+#logo {
+    float:left;
+    width:180px;
+    margin-bottom:20px;
+}
+#hero{
+    height:300px;
+    background:red;
+    margin-bottom:20px;
+}
+#wrapper{
+    max-width:1100px;
+    margin:20px auto;
+}
+/* our values are base don a 940px grid */
+/* 580 divided by 940 */
+main{
+    width:61.70%;
+    height:400px;
+    background: lightblue;
+    float: left;
+    margin-bottom:20px;
+}
+
+aside{
+    width: 36.17%;
+    height: 300px;
+    background: lightcoral;
+    float:right;
+}
+footer{
+    height:50px;
+    line-height:50px;
+    border-top:1px dotted #333;
+    clear:both;
+}
+footer ul{
+    float:right;
+}
+footer li {
+    float:left;
+    list-style-type:none;
+    margin-left:20px;
+}
