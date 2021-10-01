@@ -6,14 +6,21 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
+    background:black;
+}
+
+header{
+    height:100px;
+    line-height:100px;
     background:rgb(45, 50, 60);
 }
-a{
-
+header h2{
+    float:left;
+    margin-left:7vw;
 }
-#wrapper{
-    width:80vw;
-    margin:0 auto;
+header nav{
+    float:right;
+    margin-right:7vw;
 }
 nav{
     height:45px;
@@ -22,9 +29,83 @@ nav{
 nav ul{
     float:left;
 }
-
 nav li {
     float: left;
     list-style-type: none;
     margin-left:30px;
+}
+#hero{
+    height:320px;
+    margin:0 auto;
+    background:green;
+}
+#heroLeft{
+    width:33%;
+    height:320px;
+    float:left;
+    margin-left:10%;
+    position:relative;
+}
+#circlePhotoWrapper{
+    position:absolute;
+    /* top:25%; */
+    left:33%;
+    max-width:50%;
+    /* max-height:50%; */
+    border-radius:50%;
+    border:18px solid red;
+    overflow:hidden;
+    top:8%;
+}
+img#tedAndBird{
+    border: 10px solid blue;
+    border-radius:50%;
+    width:100%; 
+    margin:0 auto;
+}
+#heroRight{
+    width:46%;
+    height:320px;
+    float:right;
+    margin-right:10%;
+    position:relative;
+}
+#bio{
+    position:absolute;
+    top:25%;
+}
+#wrapper{
+    /* width:80vw; */
+    margin:0 auto;
+    background:rgb(45, 50, 60);
+}
+main{
+    width:50%;
+    float:left;
+    background:blue;
+    margin-left:10%;
+}
+img.screenshot{
+    width:90%;
+}
+aside{
+    width:27%;
+    float:right;
+    background:red;
+    margin-right:10%;
+}
+aside ul{
+    margin:0 auto;
+}
+
+li{
+    list-style-type:none;
+}
+footer{
+    clear:both;
+    height:100px;
+    line-height:100px;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
 }
