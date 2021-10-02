@@ -8,7 +8,6 @@
 body{
     background:black;
 }
-
 header{
     height:100px;
     line-height:100px;
@@ -16,11 +15,11 @@ header{
 }
 header h2{
     float:left;
-    margin-left:7vw;
+    margin-left:10vw;
 }
 header nav{
     float:right;
-    margin-right:7vw;
+    margin-right:10vw;
 }
 nav{
     height:45px;
@@ -36,36 +35,36 @@ nav li {
 }
 #hero{
     height:320px;
-    margin:0 auto;
     background:green;
 }
 #heroLeft{
-    width:33%;
+    width:25%;
     height:320px;
     float:left;
     margin-left:10%;
-    position:relative;
+    background:lightgreen;
+    /* position:relative; */
 }
 #circlePhotoWrapper{
-    position:absolute;
-    /* top:25%; */
-    left:33%;
-    max-width:50%;
-    /* max-height:50%; */
+    clear:both;
+    margin:auto;
     border-radius:50%;
-    border:18px solid red;
     overflow:hidden;
-    top:8%;
+    max-width:fit-content;
+    /* border: 10px solid blue; */
 }
 img#tedAndBird{
-    border: 10px solid blue;
+    border: 20px solid darkgreen;
+    display:block;
     border-radius:50%;
-    width:100%; 
-    margin:0 auto;
+    width:320px;
+    margin:auto;
 }
 #heroRight{
-    width:46%;
+    width:55%;
     height:320px;
+    line-height:320px;
+    background:darkgreen;
     float:right;
     margin-right:10%;
     position:relative;
@@ -73,26 +72,30 @@ img#tedAndBird{
 #bio{
     position:absolute;
     top:25%;
+    line-height:normal;
+    padding:0 10% 0 10%;
 }
 #wrapper{
-    /* width:80vw; */
     margin:0 auto;
-    background:rgb(45, 50, 60);
+    background:red;
 }
 main{
-    width:50%;
+    width:55%;
     float:left;
-    background:blue;
     margin-left:10%;
+    padding:20px;
+    background:lightcoral;
 }
 img.screenshot{
     width:90%;
 }
 aside{
-    width:27%;
+    width:25%;
     float:right;
-    background:red;
     margin-right:10%;
+    padding:20px;
+    background:darkred;
+    /* margin-right:10%; */
 }
 aside ul{
     margin:0 auto;

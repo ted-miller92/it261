@@ -49,9 +49,9 @@
                 <h3>Weekly Exercises</h3>
                 <h5>Week 2</h5>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">var.php</a></li>
+                        <li><a href="">currency-logic.php</a></li>
+                        <li><a href="">currency.php</a></li>
                     </ul>
                 <h5>Week 3</h5>
                     <ul>
