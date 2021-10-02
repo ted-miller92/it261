@@ -14,16 +14,24 @@ Green: rgb(161, 216, 132) or #A1D884
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
-    background:black;
+    background:white;
 }
 header{
     height:100px;
     line-height:100px;
-    background:rgb(45, 50, 60);
+    background:#425563;
 }
 header h2{
+    color:white;
     float:left;
     margin-left:10vw;
+}
+header a {
+    color:#A1D884;
+    text-decoration:none;
+}
+header a:hover{
+    color:white;
 }
 header nav{
     float:right;
@@ -43,14 +51,14 @@ nav li {
 }
 #hero{
     height:320px;
-    background:green;
+    background:#D6A461;
 }
 #heroLeft{
     width:25%;
     height:320px;
     float:left;
     margin-left:10%;
-    background:lightgreen;
+    background:#D6A461;
     /* position:relative; */
 }
 #circlePhotoWrapper{
@@ -59,10 +67,9 @@ nav li {
     border-radius:50%;
     overflow:hidden;
     max-width:fit-content;
-    /* border: 10px solid blue; */
 }
 img#tedAndBird{
-    border: 20px solid darkgreen;
+    border: 20px solid #D6A461;
     display:block;
     border-radius:50%;
     width:320px;
@@ -72,45 +79,50 @@ img#tedAndBird{
     width:55%;
     height:320px;
     line-height:320px;
-    background:darkgreen;
+    background:#D6A461;
     float:right;
     margin-right:10%;
     position:relative;
 }
 #bio{
+    color:white;
     position:absolute;
-    top:25%;
+    top:20%;
     line-height:normal;
+    font-size:120%;
     padding:0 10% 0 10%;
 }
 #wrapper{
     margin:0 auto;
-    background:red;
+    background:white;
 }
 main{
-    width:55%;
+    width:50%;
     float:left;
-    margin-left:10%;
+    margin-left:15%;
     padding:20px;
-    background:lightcoral;
 }
 img.screenshot{
     width:90%;
 }
 aside{
-    width:25%;
+    width:20%;
     float:right;
-    margin-right:10%;
+    margin-right:15%;
     padding:20px;
-    background:darkred;
     /* margin-right:10%; */
 }
 aside ul{
     margin:0 auto;
 }
-
 li{
     list-style-type:none;
+}
+aside a {
+    color:#425563;
+}
+aside a:hover{
+    color:#E04F39;
 }
 footer{
     clear:both;
@@ -119,4 +131,13 @@ footer{
     width:100%;
     margin:0 auto;
     text-align:center;
+    background:#425563;
+    color:white;
+}
+footer a {
+    color:#A1D884;
+    /* text-decoration:none; */
+}
+footer a:hover{
+    color:white;
 }
