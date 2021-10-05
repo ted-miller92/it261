@@ -98,8 +98,8 @@
                     Copyright &copy; 2021 All Rights Reserved
                     <a href="../index.php">Web Design by Ted Miller</a>
                     <a href="">Terms of Use</a>
-                    <a href="">HTML Validation</a>
-                    <a href="">CSS Validation</a>
+                    <a href="https://validator.w3.org/nu/?doc=http://www.scriptedmiller.com/it261/" target="_blank" title="Validate HTML">Check HTML</a>
+                    <a href="http://jigsaw.w3.org/css-validator/validator?uri=www.scriptedmiller.com/it261/" rel="nofollow" target="_blank" title="Validate CSS">Check CSS</a>
                 </p>
             </footer>
         </div><!--end wrapper -->
