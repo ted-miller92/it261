@@ -4,9 +4,13 @@
     margin:0;
     box-sizing: border-box;
 }
-
+html{
+    /* position:relative; */
+    /* min-height:100%; */
+}
 body {
     background: beige;
+    /* min-height:100vh; */
 }
 header {
     background: yellow;
@@ -28,6 +32,10 @@ nav a {
     text-decoration:none;
     color:black;
 }
+nav a.current{
+    color:green;
+    font-weight:bold;
+}
 .header-inner {
     max-width:1100px;
     margin: 20px auto;
@@ -36,6 +44,7 @@ nav a {
     float:left;
     width:180px;
     margin-bottom:20px;
+    max-width:100px;
 }
 #hero{
     height:300px;
@@ -44,32 +53,112 @@ nav a {
 }
 #wrapper{
     max-width:1100px;
-    margin:20px auto;
+    margin:0 auto;
+    min-height:100%;
 }
 /* our values are base don a 940px grid */
 /* 580 divided by 940 */
 main{
-    width:61.70%;
+    width:57%;
     height:400px;
     background: lightblue;
     float: left;
-    margin-bottom:20px;
+    margin:30px;
+    font-size:120%;
 }
-
+#listWrapper{
+    margin:30px;
+    float:left;
+}
+#listWrapper ul{
+    margin:0 20px 20px 20px;
+}
 aside{
-    width: 36.17%;
-    height: 300px;
+    width:35%;
+    /* height: 300px; */
     background: lightcoral;
     float:right;
 }
+#characterPhoto{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    border: 20px solid beige;
+    border-radius:50%;
+}
+#circlePhotoWrapper{
+    clear:both;
+    margin:0 auto;
+    border-radius:50%;
+    overflow:hidden;
+    max-width:80%;
+    /* max-width:100px;  */
+}
+blockquote{
+    font-size:150%;
+    font-style:italic;
+}
+.Gandalf, .Gandalf aside, main, .Gandalf a{
+    background:white;
+}
+.Gandalf a{
+    color:#993333;
+}
+.Bilbo, .Bilbo aside, .Bilbo main{
+    background:#779977;
+    color:beige;
+}
+.Bilbo a{
+    color: #ccff77;
+}
+.Frodo, .Frodo aside, .Frodo main{
+    background:#b97;
+    color:beige;
+}
+.Frodo a{
+    color:#993333;
+}
+.Aragorn, .Aragorn aside, .Aragorn main{
+    background:#579;
+    color:beige;
+}
+.Aragorn a{
+    color:#bdf;
+}
+.Samwise, .Samwise aside, .Samwise main{
+    background:#353;
+    color:beige;
+}
+.Samwise a{
+    color: #ccff77;
+}
+.Boromir, .Boromir aside, .Boromir main{
+    background:#993333;
+    color:beige;
+}
+.Boromir a{
+    color: gold;
+}
+.Gimli, .Gimli aside, .Gimli main{
+    background:#553333;
+    color:beige;
+}
+.Gimli a{
+    color: gold;
+}
+
+
 footer{
     height:50px;
     line-height:50px;
     border-top:1px dotted #333;
     clear:both;
+    /* position:absolute; */
+    bottom:0;    
 }
 footer ul{
-    float:right;
+    /* float:right; */
+    margin:0 auto;
 }
 footer li {
     float:left;

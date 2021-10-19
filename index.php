@@ -12,7 +12,7 @@
             <h2>Ted Miller</h2>
             <nav>
                 <ul>
-                    <li><a href="">Switch</a></li>
+                    <li><a href="website/daily.php">Switch</a></li>
                     <li><a href="">Troubleshooting</a></li>
                     <li><a href="">Calculator</a></li>
                     <li><a href="">Another Assignment</a></li>
@@ -57,9 +57,11 @@
                     </ul>
                 <h5>Week 3</h5>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="./weeks/week3/date.php">date.php</a></li>
+                        <li><a href="./weeks/week3/foreach.php">foreach.php</a></li>
+                        <li><a href="./weeks/week3/forloop.php">forloop.php</a></li>
+                        <li><a href="./weeks/week3/if.php">if.php</a></li>
+                        <li><a href="./weeks/week3/switch.php">switch.php</a></li>
                     </ul>
                 <h5>Week 4</h5>
                     <ul>
