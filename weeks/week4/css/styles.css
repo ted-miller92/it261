@@ -1,0 +1,41 @@
+/* Styles for celsius form */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    /* background:#ddd; */
+}
+h2{
+    text-align:center;
+    color:indigo;
+}
+h3{
+    text-align:center;
+    font-style:italic;
+    color:red;
+}
+form{
+    width:400px;
+    margin:30px auto;
+}
+fieldset{
+    border:1px solid green;
+    padding:12px;
+    color:brown;
+}
+input{
+    display:block;
+    margin-bottom:10px;
+}
+label{
+    color:#333;
+    margin-bottom:10px;
+    display:block;
+}
+legend{
+    font-size:1.2em;
+    font-style:italic;
+    color:coral;
+}
