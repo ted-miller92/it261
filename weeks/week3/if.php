@@ -41,3 +41,4 @@ if($sales >= 800000){
     $salary *= 1;
     echo $salary;
 }
+?>

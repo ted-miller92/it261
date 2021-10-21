@@ -51,13 +51,24 @@ switch($today) {
         $content = 'Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, and since then its production and manufacture has spread to other countries in East Asia.';
         break;
     case 'Monday' :
-        $coffee = '<h2>Monday</h2>';
+        $coffee = '<h2>Monday is Cafe au Lait Day!</h2>';
+        $pic = 'cafeAuLait.jpg';
+        $alt = 'Cafe au Lait';
+        $content = 'Café au lait (/ˌkæfeɪ oʊ ˈleɪ, kæˌfeɪ, kə-/; French: [kafe o lɛ]; French for "coffee with milk") is coffee with hot milk added. It differs from white coffee, which is coffee with cold milk or other whiteners added. ';
         break;
     case 'Tuesday' :
-        $coffee = '<h2>Tuesday</h2>';
+        $coffee = '<h2>Tuesday is Red-Eye Day!</h2>';
+        $pic = 'redEye.jpg';
+        $alt = 'Red Eye';
+        $content = 'A red eye is a fortified coffee drink in which espresso is combined with normal drip coffee. It is known by various names, some of which refer to different variants. Drip coffee to which espresso is added may be called a red eye, black eye, or dead eye, depending on the number of shots which have been added. ';
         break;
     case 'Wednesday' :
-        $coffee = '<h2>Wednesday</h2>';
+        $coffee = '<h2>Wednesday is Cortado Day!</h2>';
+        $pic = 'cortado.jpg';
+        $alt = 'Cortado';
+        $content = 'A cortado is a beverage consisting of espresso mixed with a roughly equal amount of warm milk to reduce the acidity. The milk in a cortado is steamed, but not frothy and "texturized" as in many Italian coffee drinks.
+
+        The word cortado is the past participle of the Spanish verb cortar (to cut), in the sense of "dilute", and can refer variously to either coffee or espresso drinks throughout Spanish and Portuguese speaking countries. ';
         break;
 }
 ?>
@@ -70,6 +81,9 @@ switch($today) {
         #wrapper{
             width:940px;
             margin:40px auto;
+        }
+        img{
+            max-width:300px;
         }
     </style>
 </head>
@@ -84,10 +98,13 @@ switch($today) {
         <p><?php echo $content; ?></p>
         <h2>Check out our daily specials</h2>
         <ul>
+            <li><a href="switch.php?today=Sunday">Sunday</a></li>
+            <li><a href="switch.php?today=Monday">Monday</a></li>
+            <li><a href="switch.php?today=Tuesday">Tuesday</a></li>
+            <li><a href="switch.php?today=Wednesday">Wednesday</a></li>
             <li><a href="switch.php?today=Thursday">Thursday</a></li>
             <li><a href="switch.php?today=Friday">Friday</a></li>
             <li><a href="switch.php?today=Saturday">Saturday</a></li>
-            <li><a href="switch.php?today=Sunday">Sunday</a></li>
         </ul>
     </div>
 </body>
