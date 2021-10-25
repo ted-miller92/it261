@@ -13,7 +13,7 @@
             <nav>
                 <ul>
                     <li><a href="website/daily.php">Switch</a></li>
-                    <li><a href="">Troubleshooting</a></li>
+                    <li><a href="adder.php">Troubleshooting</a></li>
                     <li><a href="">Calculator</a></li>
                     <li><a href="">Another Assignment</a></li>
                     <li><a href="">And Another</a></li>
