@@ -51,6 +51,10 @@ if(isset($_GET['today'])){
 }else{
     $today = date('l');
 }
+
+//Check HTML and CSS of Current page
+$currentURL = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 ?>
 
 <!doctype html>

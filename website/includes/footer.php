@@ -13,8 +13,8 @@
                 <li>All Rights Reserved</li>
                 <li><a href="../index.php">Web Design by Ted Miller</a></li>
                 <li><a href="">Terms of Use</a></li>
-                <li><a href="">HTML Validation</a></li>
-                <li><a href="">CSS Validation</a></li>
+                <li><a href="https://validator.w3.org/nu/?doc=<?=$currentURL?>">HTML Validation</a></li>
+                <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $currentURL?>">CSS Validation</a></li>
             </ul>
         </footer>
     </div><!--end wrapper-->
