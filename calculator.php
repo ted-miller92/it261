@@ -18,7 +18,7 @@
                 <input type="number" name="miles" value="<?php if(isset($_POST['miles'])) echo htmlspecialchars($_POST['miles']) ;?>">
 
                 <label for="dailyHours">How many hours per day will you drive?</label>
-                <input type="number" name="dailyHours" value="<?php if(isset($_POST['dailyHours'])) echo htmlspecialchars($_POST['dailyHours']) ;?>">
+                <input type="number" name="dailyHours" value="<?php if(isset($_POST['dailyHours'])) echo $_POST['dailyHours'] ;?>">
 
                 <label for="price">Price of a gallon of gas:</label>
                 <ul>
@@ -39,10 +39,10 @@
                 <label for="avgSpeed">How fast (mph) will you drive on average?</label>
                 <select name="avgSpeed">
                     <option value="" NULL <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == NULL) echo 'selected="unselected"';?>>Select your driving style</option>
-                    <option value="60" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '60') echo 'selected="selected"';?>>Washington-style(60mph)</option>
-                    <option value="70" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '70') echo 'selected="selected"';?>>Cali-style(70mph)</option>
-                    <option value="80" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '80') echo 'selected="selected"';?>>NY-style(80mph)</option>
-                    <option value="90" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '90') echo 'selected="selected"';?>>Montana-style(90mph)</option>
+                    <option value="60" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '60') echo 'selected="selected"';?>>60mph</option>
+                    <option value="70" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '70') echo 'selected="selected"';?>>70mph</option>
+                    <option value="80" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '80') echo 'selected="selected"';?>>80mph</option>
+                    <option value="90" <?php if(isset($_POST['avgSpeed']) && $_POST['avgSpeed'] == '90') echo 'selected="selected"';?>>90mph</option>
                 </select>
 
                 <input type="submit" value="Calculate">
@@ -76,7 +76,7 @@
                     <h2>Please select the fuel efficiency</h2>
                     </div>';
             }
-            if($_POST['avgSpeed'] == NULL || $_POST['avgSpeed'] = 0){
+            if($_POST['avgSpeed'] == NULL){
                 echo '<div class="errorBox">
                     <h2>Please tell us how fast you will drive</h2>
                     <p>(we won\'t be sharing this information with the state patrol)</p>
