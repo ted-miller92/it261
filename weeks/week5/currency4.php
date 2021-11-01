@@ -7,6 +7,7 @@
 
     </head>
     <body>
+        <h1></h1>
 
         <form action="
         <?php
@@ -91,30 +92,39 @@
 
                         // here is where we convert
                         $dollars = number_format($amount * $exchange, 2);
-
-                        echo '
-                            <div class="box">
-                                <h2>Hello, '.$name.'</h2>
-                                <p>You now have $'.$dollars.' American Dollars. Your balance will be deposited to <b>'.$bank.'</b> and we will email you at:<b>'.$email.'</b> in the next 24 hours.</p>
-                            </div>
-                            ';
                         
                         if(!empty($dollars)){
                             $video_url = '';
 
                             if($dollars >= 1000){
                                 $video_url = 'https://www.youtube.com/watch?v=HgzGwKwLmgM'; // Lots of money
+                                $mood = 'happy';
                             }else{
                                 $video_url = 'https://www.youtube.com/watch?v=Pvtlt-p7vB4'; // Not a lot of money
+                                $mood = 'sad';
                             }
                             echo '
-                                <aside>
+                                <div class="'.$mood.'">
+                                    <h2>Hello, '.$name.'</h2>
+                                    <p>You now have $'.$dollars.' American Dollars. Your balance will be deposited to <b>'.$bank.'</b> and we will email you at:<b>'.$email.'</b> in the next 24 hours.</p>
+                                    <aside>
                                     <iframe width="560" height="315" src="'.$video_url.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </aside>
+                                </div>
+                                
                                 ';
                         }
                     } // end if(isset)
             } // end server request
         ?>
+        <footer>
+                <p>
+                    Copyright &copy; 2021 All Rights Reserved
+                    <a href="../index.php">Web Design by Ted Miller</a>
+                    <a href="">Terms of Use</a>
+                    <a href="https://validator.w3.org/nu/?doc=http://www.scriptedmiller.com/it261/" target="_blank" title="Validate HTML">Check HTML</a>
+                    <a href="http://jigsaw.w3.org/css-validator/validator?uri=www.scriptedmiller.com/it261/" rel="nofollow" target="_blank" title="Validate CSS">Check CSS</a>
+                </p>
+            </footer>
     </body>
 </html>

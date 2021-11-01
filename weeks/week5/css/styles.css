@@ -41,7 +41,7 @@ fieldset{
     border-style:none;
 }
 .box{
-    width:400px;
+    width:600px;
     margin:30px auto;
     padding:8px;
     background:#242;
@@ -58,6 +58,24 @@ fieldset{
     border-radius:10px;
     overflow:hidden;
 }
+div.sad{
+    width:600px;
+    margin:30px auto;
+    padding:8px;
+    background:#422;
+    border:5px solid #d55;
+    border-radius:10px;
+    overflow:hidden;
+}
+div.happy{
+    width:600px;
+    margin:30px auto;
+    padding:8px;
+    background:#242;
+    border:5px solid #5d5;
+    border-radius:10px;
+    overflow:hidden;
+}
 select{
     display:block;
     margin-bottom:5px;
@@ -65,4 +83,21 @@ select{
 aside{
     width:500px;
     margin:30px auto;
+}
+footer{
+    clear:both;
+    height:100px;
+    line-height:100px;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    background:#444;
+    color:white;
+}
+footer a {
+    color:#5d5;
+    /* text-decoration:none; */
+}
+footer a:hover{
+    color:white;
 }
