@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -111,21 +107,24 @@
                     if ($dailyHours ==0){
                         $dailyHours = 1;
                     }
+                    if ($avgSpeed == 0){
+                        $avgSpeed = 1;
+                    }
                     $totalMinutes = intval(60 * ($miles / $avgSpeed));
                     $totalHours = floor($totalMinutes/ 60);
                     $remainderMinutes = $totalMinutes%60;
 
-                    if ($avgSpeed == 0){
-                        $avgSpeed = 1;
-                    }
+                    
                     $totalDays = ceil(($miles / $avgSpeed) / $dailyHours);
 
                     if($error_status == FALSE){
                         echo    '<div class="box">
                                     <h2>Hello, '.$name.'</h2>
                                     <p>Here is some important information about your trip:</p>
+                                    
                                     <table>
                                         <tr><td>Total cost of fuel:</td> <td>$'.$totalCost.'</td></tr>
+                                        <tr><td>Your fuel efficiency:</td><td> '.$mpg.' mpg</td></tr>
                                         <tr><td>Total minutes driving: </td><td>'.$totalMinutes.' minutes</td></td>
                                         <tr><td>Total time:</td><td> '.$totalHours.' hours, '.$remainderMinutes.' minutes</td></tr>
                                         <tr><td>Total days required:</td><td>'.$totalDays.'</td></tr>
