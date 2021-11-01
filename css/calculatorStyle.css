@@ -49,6 +49,10 @@ fieldset{
     border:5px solid #5d5;
     border-radius:10px;
     overflow:hidden;
+    color:white;
+}
+.box h2, .box p{
+    padding:3px;
 }
 .errorBox{
     width:400px;
@@ -60,7 +64,14 @@ fieldset{
     border-radius:10px;
     overflow:hidden;
 }
+
 select{
     display:block;
     margin-bottom:5px;
+}
+table{
+    margin:0 auto;
+}
+td{
+    padding:3px;
 }

@@ -51,36 +51,43 @@
         </form>
         <?php
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $error_status = FALSE;
             if(empty($_POST['name'])){
                 echo '<div class="errorBox">
                     <h2>Please enter your name</h2>
                     </div>';
+                    $error_status = TRUE;
             }
             if(empty($_POST['miles'])){
                 echo '<div class="errorBox">
                     <h2>Please enter the number of miles you will travel</h2>
                     </div>';
+                    $error_status = TRUE;
             }
             if(empty($_POST['dailyHours'])){
                 echo '<div class="errorBox">
                     <h2>Please enter the the time you will be driving</h2>
                     </div>';
+                    $error_status = TRUE;
             }
             if(empty($_POST['price'])){
                 echo '<div class="errorBox">
                     <h2>Please enter the price of a gallon of gas</h2>
                     </div>';
+                    $error_status = TRUE;
             }
             if($_POST['mpg'] == NULL){
                 echo '<div class="errorBox">
                     <h2>Please select the fuel efficiency</h2>
                     </div>';
+                    $error_status = TRUE;
             }
             if($_POST['avgSpeed'] == NULL){
                 echo '<div class="errorBox">
                     <h2>Please tell us how fast you will drive</h2>
                     <p>(we won\'t be sharing this information with the state patrol)</p>
                     </div>';
+                    $error_status = TRUE;
             }
             if(isset($_POST['name'],
                     $_POST['miles'],
@@ -95,15 +102,36 @@
                     $price = intval($_POST['price']);
                     $mpg = intval($_POST['mpg']);
                     $avgSpeed = intval($_POST['avgSpeed']);
-
+                    
+                    if ($mpg == 0){
+                        $mpg = 1;
+                    }
                     $totalCost = number_format(($miles / $mpg * $price), 2);
-                    echo '<h1>Total cost of fuel: '.$totalCost.'</h1>';
 
-                    $totalTime = $miles / $dailyHours;
-                    echo '<h2>Total time driving: '.$totalTime.'</h2>';
+                    if ($dailyHours ==0){
+                        $dailyHours = 1;
+                    }
+                    $totalMinutes = intval(60 * ($miles / $avgSpeed));
+                    $totalHours = floor($totalMinutes/ 60);
+                    $remainderMinutes = $totalMinutes%60;
 
-                    $totalDays = ($miles / $avgSpeed) / $dailyHours;
-                    echo '<h2>Total days required: '.$totalDays.'</h2>';
+                    if ($avgSpeed == 0){
+                        $avgSpeed = 1;
+                    }
+                    $totalDays = ceil(($miles / $avgSpeed) / $dailyHours);
+
+                    if($error_status == FALSE){
+                        echo    '<div class="box">
+                                    <h2>Hello, '.$name.'</h2>
+                                    <p>Here is some important information about your trip:</p>
+                                    <table>
+                                        <tr><td>Total cost of fuel:</td> <td>$'.$totalCost.'</td></tr>
+                                        <tr><td>Total minutes driving: </td><td>'.$totalMinutes.' minutes</td></td>
+                                        <tr><td>Total time:</td><td> '.$totalHours.' hours, '.$remainderMinutes.' minutes</td></tr>
+                                        <tr><td>Total days required:</td><td>'.$totalDays.'</td></tr>
+                                    </table>
+                                </div>';
+                    }
                 }
         }
         ?>

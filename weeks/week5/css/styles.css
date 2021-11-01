@@ -62,3 +62,7 @@ select{
     display:block;
     margin-bottom:5px;
 }
+aside{
+    width:500px;
+    margin:30px auto;
+}
