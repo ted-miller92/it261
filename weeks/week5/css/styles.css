@@ -9,7 +9,10 @@ body{
     background:#444;
     color:white;
 }
-
+h1{
+    width:max-content;
+    margin:30px auto;
+}
 form{
     width:400px;
     margin:30px auto;
