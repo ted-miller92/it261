@@ -98,11 +98,11 @@
                             $video_url = '';
 
                             if($dollars > 1000){
-                                $video_url = 'https://www.youtube.com/watch?v=HgzGwKwLmgM'; // Lots of money
+                                $video_url = 'https://www.youtube.com/embed/HgzGwKwLmgM'; // Lots of money
                                 $mood = 'happy';
                                 
                             }else{
-                                $video_url = 'https://www.youtube.com/watch?v=Pvtlt-p7vB4'; // Not a lot of money
+                                $video_url = 'https://www.youtube.com/embed/Pvtlt-p7vB4'; // Not a lot of money
                                 $mood = 'sad';
                                 
                             }
@@ -111,8 +111,10 @@
                                     <h2>Hello, '.$name.'</h2>
                                     <p>You now have $'.$dollars.' American Dollars. Your balance will be deposited to <b>'.$bank.'</b> and we will email you at: <b>'.$email.'</b> in the next 24 hours.</p>
                                     <aside>
-                                    <iframe width="560" height="315" src="'.$video_url.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </aside>
+                                        <div class="embed-container">
+                                            <iframe src="'.$video_url.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </aside>
                                 </div>
                                 
                                 ';
