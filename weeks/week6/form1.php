@@ -47,8 +47,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }else{
         $wines = $_POST['wines'];
     }
+    if($_POST['regions'] == NULL){
+        $regions_error = 'Please select a region';
+    }else{
+        $regions = $_POST['regions'];
+    }
+    if(empty($_POST['comments'])){
+        $comments_error = 'Please share your comments with us';
+    }else {
+        $comments = $_POST['comments'];
+    }
+    if(empty($_POST['privacy'])){
+        $privacy_error = 'Please agree to terms';
+    }else{
+        $privacy = $_POST['privacy'];
+    }
     // end error handling
-}
+} // end if server request
 ?>
 <!DOCTYPE html>
 
@@ -62,31 +77,34 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <form action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
         <fieldset>
             <label for="first_name">First Name</label>
-            <input type="text" name="first_name">
+            <input type="text" name="first_name" value="<?php if(isset($_POST['first_name'])) echo htmlspecialchars($_POST['first_name']);?>">
             <span class="error"><?php echo $first_name_error;?></span>
 
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name">
+            <input type="text" name="last_name" value="<?php if(isset($_POST['last_name'])) echo htmlspecialchars($_POST['last_name']);?>">
             <span class="error"><?php echo $last_name_error;?></span>
 
             <label for="email">Email</label>
-            <input type="email" name="email">
+            <input type="email" name="email" value="<?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']);?>">
+            <span class="error"><?php echo $email_error;?></span>
 
             <label for="gender">Gender</label>
             <ul>
-                <li><input type="radio" name="gender" value="female">Female</li>
-                <li><input type="radio" name="gender" value="male">Male</li>
-                <li><input type="radio" name="gender" value="other">Other</li>
+                <li><input type="radio" name="gender" value="female" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked="checked"';?>>Female</li>
+                <li><input type="radio" name="gender" value="male" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked="checked"';?>>Male</li>
+                <li><input type="radio" name="gender" value="other" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'other') echo 'checked="checked"';?>>Other</li>
             </ul>
+            <span class="error"><?php echo $gender_error;?></span>
 
             <label for="wines">Favorite Wines</label>
             <ul>
-                <li><input type="checkbox" name="wines[0]" value="cab" >Cabernet</li>
+                <li><input type="checkbox" name="wines[0]" value="cab" <?php if(isset($_POST['wines']) && $_POST['wines'] == 'cab') echo 'checked="checked"'; ?>>Cabernet</li>
                 <li><input type="checkbox" name="wines[1]" value="merlot">Merlot</li>
                 <li><input type="checkbox" name="wines[2]" value="syrah">Syrah</li>
                 <li><input type="checkbox" name="wines[3]" value="malbec">Malbec</li>
                 <li><input type="checkbox" name="wines[4]" value="red" >Red Blend</li>
             </ul>
+            <span class="error"><?php echo $wines_error;?></span>
 
             <label for="regions">Regions</label>
             <select name="regions">
@@ -98,15 +116,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <option value="se">Southeast</option>
                 <option value="so">South</option>
             </select>
+            <span class="error"><?php echo $regions_error;?></span>
 
             <label for="comments">Comments</label>
             <textarea name="comments"></textarea>
+            <span class="error"><?php echo $comments_error;?></span>
 
             <label for="privacy">Privacy</label>
             <ul>
                 <li><input type="radio" name="privacy">I agree</li>
             </ul>
-
+            <span class="error"><?php echo $privacy_error;?></span>
             <input type="submit" value="Submit">
             <p><a href="">Reset</a></p>
         </fieldset>

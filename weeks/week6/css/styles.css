@@ -10,11 +10,11 @@ label{
 }
 form ul{
     list-style:none;
-    margin:0 0 10px 10px    ;
+    margin:0 0 10px 10px;
 }
 .error{
+    display:block;  
     color:red;
     font-style:italic;
-    /* float:right; */
-    display:inline;
+    margin-bottom:5px 0 10px 0;
 }
