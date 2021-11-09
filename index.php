@@ -83,9 +83,9 @@
                     </ul>
                 <h5>Week 6</h5>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="./weeks/week6/form1.php">form1.php</a></li>
+                        <li><a href="./weeks/week6/functions.php">functions.php</a></li>
+                        <li><a href="./weeks/week6/implode.php">implode.php</a></li>
                     </ul>
                 <h5>Week 7</h5>
                     <ul>
