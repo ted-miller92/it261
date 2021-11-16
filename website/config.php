@@ -204,7 +204,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $_POST['comments'],
             $_POST['privacy']
             )){
-                $to = 'ted.miller92@gmail.com';
+                $to = 'szemeo@mystudentswa.com'; // change this depending on submission status
                 $subject = 'New Frame Build from '.$first_name.' '.$last_name.'';
                 $body = '
                     This is a new frame build request from '.$first_name.' '.$last_name.'.'.PHP_EOL.'
