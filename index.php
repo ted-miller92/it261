@@ -89,9 +89,9 @@
                     </ul>
                 <h5>Week 7</h5>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="./weeks/week7/pictures.php">pictures.php</a></li>
+                        <li><a href="./weeks/week7/random.php">random.php</a></li>
+                        <li><a href="./weeks/week7/strings.php">strings.php</a></li>
                     </ul>
                 <h5>Week 8</h5>
                     <ul>
