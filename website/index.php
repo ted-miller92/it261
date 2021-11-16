@@ -2,7 +2,9 @@
 <?php include "includes/header.php" ?>
     <div id="wrapper">
         <div id="hero">
-
+        <?php 
+            echo random_pictures($photos);
+        ?>
         </div> <!--end hero-->
         <main>
             <h1><?php echo $headline; ?></h1>

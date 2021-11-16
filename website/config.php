@@ -49,12 +49,17 @@ switch(THIS_PAGE){
     case 'contact.php' :
             $title = 'Contact Page of IT261 Website';
             $body = 'contact inner';
-            $headline = 'Welcome to our Contact Page for IT 261 Website';
+            $headline = 'Contact Us';
             break;
     case 'gallery.php' :
         $title = 'Gallery Page of IT261 Website';
         $body = 'gallery inner';
         $headline = 'Welcome to our Gallery Page for IT 261 Website';
+        break;
+    case 'thx.php' :
+        $title = 'Thank you';
+        $body = 'thx page';
+        $headline = 'Thank you for your request!';
         break;
 }
 
@@ -67,5 +72,20 @@ if(isset($_GET['today'])){
 
 //Check HTML and CSS of Current page
 $currentURL = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+// define random_pictures() function
+$photos = array(
+    'photo1',
+    'photo2',
+    'photo3',
+    'photo4',
+    'photo5'
+);
 
+function random_pictures($photos){
+    $i = rand(0, 4);
+
+    $selected_image = ''.$photos[$i].'.jpg';
+    
+    echo '<img src="images/'.$selected_image.'" alt="'.$photos[$i].'">';
+}
 ?>
