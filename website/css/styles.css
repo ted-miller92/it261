@@ -190,6 +190,24 @@ fieldset a{
 img.bike{
     max-width:100%;
 }
+/* Gallery Styles */
+main.fullWidth{
+    clear:both;
+    width:100%;
+
+}
+table{
+
+}
+tr{
+    /* margin:20px; */
+}
+td{
+    padding:20px;
+}
+img.cocktail{
+    max-width:180px;
+}
 footer{
     height:50px;
     line-height:50px;

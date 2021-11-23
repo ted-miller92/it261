@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background:beige;
+}
+
+#wrapper{
+    max-width:1100px;
+    margin:20px auto;
+}
+
+main{
+    float:left;
+    width:63%;
+    margin-bottom:30px;
+}
+p {
+    margin-bottom:30px;
+    line-height:1.25;
+}
+.peopleSegment{
+    margin:20px;
+}
+
+ul{
+    list-style-type: none;
+}
+aside{
+    float:right;
+    /* background-color:darkgreen; */
+    width:36%;
+    margin-bottom:30px;
+    /* height:300px; */
+}
+.blurb{
+    font-style:italic;
+    font-size: .9em;
+}
+.center{
+    display:block;
+    margin:0 auto 20px auto;
+}
+
+footer{
+    clear:both;
+}
+footer ul{
+    margin:0 auto;
+    max-width:max-content;
+}
+footer li{
+    float:left;
+    margin-right:30px;
+}
+img{
+    max-width:100%;
+}
+

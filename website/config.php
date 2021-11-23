@@ -9,6 +9,8 @@ $nav['project.php'] = 'Project';
 $nav['contact.php'] = 'Contact';
 $nav['gallery.php'] = 'Gallery';
 
+$logo = 'images/logo.png';
+
 // change logo of 'website' header
 
 // create a function for navigation so that header.php can call nav function
@@ -40,6 +42,7 @@ switch(THIS_PAGE){
         $title = 'Daily Page of IT261 Website';
         $body = 'daily inner';
         $headline = 'Welcome to our Daily Page for IT 261 Website, where our HW3 Switch will display';
+        $logo = 'images/one-ring.png';
         break;
     case 'project.php' :
         $title = 'Project Page of IT261 Website';
@@ -226,6 +229,46 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 header('location: thx.php');
             } // end email
 } // end server request
+
+// Begin Database Connection
+
+ob_start();  // prevents header errors before reading the whole page!
+define('DEBUG', 'TRUE');  // We want to see our errors
+
+include('credentials.php');
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+function myError($myFile, $myLine, $errorMsg)
+{
+if(defined('DEBUG') && DEBUG)
+{
+ echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+    
+    
+}
+
+ 
 
 
 ?>

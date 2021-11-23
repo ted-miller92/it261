@@ -1,4 +1,4 @@
-
+<?php $logo = 'images/logo.png'; ?>
 <?php include "includes/header.php" ?>
     <div id="wrapper">
         <div id="hero">
@@ -12,6 +12,7 @@
         </main>
         
         <aside>
+            <img src='images/adminer.png' alt='adminer' />
 
         </aside>
 <?php include "includes/footer.php" ?>
