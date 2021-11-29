@@ -95,9 +95,7 @@
                     </ul>
                 <h5>Week 8</h5>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="./weeks/week8/people.php">people.php</a></li>
                     </ul>
             </aside>
 
