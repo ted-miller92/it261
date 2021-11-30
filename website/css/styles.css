@@ -64,13 +64,23 @@ nav a.current{
 /* our values are base don a 940px grid */
 /* 580 divided by 940 */
 main{
-    width:57%;
+    width:60%;
     /* height:400px; */
     background: lightblue;
     float: left;
     /* margin:30px; */
     padding:30px;
     font-size:120%;
+}
+main p{
+    padding:6px;
+}
+main ul{
+    padding:6px;
+    list-style-type:none;
+}
+main li{
+    padding:2px;
 }
 #listWrapper{
     margin:30px;
@@ -196,12 +206,7 @@ main.fullWidth{
     width:100%;
 
 }
-table{
 
-}
-tr{
-    /* margin:20px; */
-}
 td{
     padding:20px;
 }
@@ -224,4 +229,20 @@ footer li {
     float:left;
     list-style-type:none;
     margin-left:20px;
+}
+img.cheese{
+    max-width:100%;
+}
+img.screenshot{
+    max-width:100%;
+}
+aside h3{
+    padding:4px;
+}
+aside p{
+    padding:4px;
+}
+aside blockquote{
+    padding:4px;
+    font-size:smaller;
 }

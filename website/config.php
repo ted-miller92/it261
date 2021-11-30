@@ -1,5 +1,10 @@
 <?php
 
+ob_start();  // prevents header errors before reading the whole page!
+define('DEBUG', 'TRUE');  // We want to see our errors
+
+include('credentials.php');
+
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 $nav['index.php'] = 'Home';
@@ -36,7 +41,7 @@ switch(THIS_PAGE){
     case 'about.php' :
         $title = 'About Page of IT261 Website';
         $body = 'about inner';
-        $headline = 'Welcome to our About Page for IT 261 Website';
+        $headline = 'About Page for IT 261 Website';
         break;
     case 'daily.php' :
         $title = 'Daily Page of IT261 Website';
@@ -45,9 +50,9 @@ switch(THIS_PAGE){
         $logo = 'images/one-ring.png';
         break;
     case 'project.php' :
-        $title = 'Project Page of IT261 Website';
+        $title = 'Cheese';
         $body = 'project inner';
-        $headline = 'Welcome to our Project Page for IT 261 Website';
+        $headline = 'Delicious Cheese';
         break;
     case 'contact.php' :
             $title = 'Contact Page of IT261 Website';
@@ -232,43 +237,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 // Begin Database Connection
 
-ob_start();  // prevents header errors before reading the whole page!
-define('DEBUG', 'TRUE');  // We want to see our errors
 
-include('credentials.php');
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
 function myError($myFile, $myLine, $errorMsg)
 {
 if(defined('DEBUG') && DEBUG)
 {
- echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
-      echo 'Error message: <b> '.$errorMsg.'</b>';
-      die();
-  }  else {
-      echo ' Houston, we have a problem!';
-      die();
-  }
-    
-    
+    echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+        echo 'Error message: <b> '.$errorMsg.'</b>';
+        die();
+    }  else {
+        echo ' Houston, we have a problem!';
+        die();
+    } 
 }
-
- 
-
-
 ?>
