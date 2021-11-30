@@ -28,7 +28,7 @@ if(isset($_POST['reg_user'])){
         array_push($errors, 'First Name required');
     }
     if(empty($last_name)){
-        array_push($erros, 'Last Name required');
+        array_push($errors, 'Last Name required');
     }
     if(empty($email)){
         array_push($errors, 'Email required');
@@ -78,3 +78,36 @@ if(isset($_POST['reg_user'])){
         header('Location:login.php');
     } // end error counting 
 } // end if(isset(reg_user))
+
+if(isset($_POST['login_user'])){
+    $username = mysqli_real_escape_string($iConn, $_POST['username']);
+    $password = mysqli_real_escape_string($iConn, $_POST['password']);
+
+    if(empty($username)){
+        array_push($errors, 'Please enter your username');
+    }
+    if(empty($password)){
+        array_push($errors, 'Please enter your password');
+    }
+
+    if(count($errors) == 0){
+        $password = md5($password);
+        // now make sure there is only one username/password
+        // we will SELECT from table
+
+        $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+
+        $results = mysqli_query($iConn, $query);
+
+        // if username/password is equal to one (1) it's all good
+        if(mysqli_num_rows($results) == 1) {
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = $success;
+            // if we are successful, we will be directed to index.php
+
+            header('Location:index.php');
+        } else {
+            array_push($errors, 'Wrong username or password');
+        }
+    } // end if(count($errors) == 0)
+} // end if(isset()) for login
