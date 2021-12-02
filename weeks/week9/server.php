@@ -22,7 +22,7 @@ if(isset($_POST['reg_user'])){
 
     $password1 = mysqli_real_escape_string($iConn, $_POST['password1']);
 
-    $password2 = mysqli_real_escape_string($iConn, $_POST['password1']);
+    $password2 = mysqli_real_escape_string($iConn, $_POST['password2']);
 
     if(empty($first_name)){
         array_push($errors, 'First Name required');
@@ -37,7 +37,10 @@ if(isset($_POST['reg_user'])){
         array_push($errors, 'Username required');
     }
     if(empty($password1)){
-        array_push($errors, 'Password require');
+        array_push($errors, 'Password required');
+    }
+    if(empty($password2)){
+        array_push($errors, 'Please confirm your password');
     }
     if($password1 !== $password2){
         array_push($errors, 'Passwords must match');
