@@ -21,7 +21,6 @@ h1{
     margin:0 auto;
     padding:0;
     color:white;
-    text-shadow: 10px 10px #71a, 20px 20px #f71;
 }
 /* success div styles */
 #success{
@@ -49,10 +48,10 @@ nav li{
     float:left;
     padding:15px 50px 15px 0;
 }
-nav li.login{
+/* nav li.login{
     float:right;
     right:0px;
-}
+} */
 nav li.current{
     background-color:red;
 }

@@ -36,6 +36,7 @@ $nav['register.php'] = 'Register';
 $nav['contact.php'] = 'Contact';
 $nav['movies.php'] = 'Movies';
 $nav['movie-view.php'] = 'Movie Details';
+$nav['director-of-the-day.php'] = 'Director of the Day';
 
 function create_nav($nav){
     $nav_list = '';
@@ -88,6 +89,11 @@ switch(THIS_PAGE){
         $title = 'Details for '.$movie.'';
         $body_class = 'movie-view';
         $headline = 'Details for '.$movie.'';
+        break;
+    case 'director-of-the-day.php':
+        $title = 'Director of the Day';
+        $body_class = 'director-of-the-day';
+        $headline = 'Director of the Day';
         break;
 }
 
