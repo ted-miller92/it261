@@ -2,71 +2,227 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-#wrapper{
-    width:65%;
-    margin:0 auto;
-}
-#hero{
-    height:220px;
-    width:100%;
-    margin:0 auto;
-    background-image:linear-gradient(135deg, #f71, #c1e, #71a);
-    clear:both;
-}
-h1{
-    font-size:300%;
-    width:65%;
     font-family:sans-serif;
-    margin:0 auto;
-    padding:0;
-    color:white;
 }
-/* success div styles */
-#success{
-    position:absolute;
-    right:17.25%;
-    background-color:white;
+h3{
+    padding:2px;
 }
-.welcome-logout{
-    float:right;
+h5{
+    padding:2px;
 }
-header{
-    width:65%;
-    margin:0 auto;
+p{
+    padding:2px;
 }
-/* navigation styles */
+/*****************/
+/* Mobile Styles */
+/*****************/
+@media all and (max-width: 899px){
+    #wrapper{
+        width:100%;
+        margin:0 auto;
+    }
+    #hero{
+        height:80px;
+        width:100%;
+        margin: 0 auto;
+        background-image:linear-gradient(135deg, #f71, #c1e, #71a);
+        clear:both;
+    }
+    h1{
+        font-size: 200%;
+        margin: 0 auto;
+        padding: 0;
+        color:white;
+    }
+    /* success div styles */
+    #success{
+        position:absolute;
+        right:0;
+        background-color:white;
+    }
+    .welcome-logout{
+        float:right;
+    }
+     /* navigation styles */
+    div#menuIcon{
+        display:block;
+        padding:15px 40px 15px 0;
+    }
+    nav{
+        margin: 0 auto;
+    }
+    nav ul.menu{
+        display:none;
+    }
+    nav ul.visible{
+        display:block;
+        position:absolute;
+        width:100%;
+    }
+    nav ul.visible{
+        list-style-type: none;
+    }
+    nav li{
+        padding:15px 40px 15px 0;
+        background-color:white;
+    }
+    nav li.current{
+        background-color:red;
+    }
+    
+    /* end nav styles */
+}
 
-nav{
-    margin: 0 auto;
+/*****************/
+/* Tablet Styles */
+/*****************/
+@media all and (min-width: 900px)
+{
+    #wrapper{
+        width:100%;
+        margin:0 auto;
+    }
+    #hero{
+        height:220px;
+        width:100%;
+        margin:0 auto;
+        background-image:linear-gradient(135deg, #f71, #c1e, #71a);
+        clear:both;
+    }
+    h1{
+        font-size:300%;
+        margin:0 auto;
+        padding:0;
+        color:white;
+    }
+    /* success div styles */
+    #success{
+        position:absolute;
+        right:0;
+        background-color:white;
+    }
+    .welcome-logout{
+        float:right;
+    }
+    header{
+        width:100%;
+        margin:0 auto;
+    }
+    /* navigation styles */
+    div#menuIcon{
+        display:block;
+        padding:15px 40px 15px 0;
+    }
+    nav{
+        margin: 0 auto;
+    }
+    nav ul.menu{
+        display:none;
+    }
+    nav ul.visible{
+        display:block;
+        position:absolute;
+        width:100%;
+    }
+    nav ul.visible{
+        list-style-type: none;
+    }
+    nav li{
+        padding:15px 40px 15px 0;
+        background-color:white;
+    }
+    nav li.current{
+        background-color:red;
+    }
+    /* end nav styles */
+    main{
+        width:65%;
+        float:left;
+    }
+    aside{
+        width:35%;
+        float:right;
+    }
+    footer{
+        clear:both;
+        margin:100px 0;
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+    }
 }
-nav ul{
-    list-style-type: none;
-}
-nav li{
-    /* display:block; */
-    float:left;
-    padding:15px 50px 15px 0;
-}
-/* nav li.login{
-    float:right;
-    right:0px;
-} */
-nav li.current{
-    background-color:red;
-}
-main{
-    width:65%;
-    float:left;
-}
-aside{
-    width:35%;
-    float:right;
-}
-footer{
-    clear:both;
-    margin:100px 0;
-    width:100%;
-    margin:0 auto;
-    text-align:center;
+
+/*****************/
+/* Desktop Styles*/
+/*****************/
+@media all and (min-width: 1200px){
+    #wrapper{
+        width:65%;
+        margin:0 auto;
+    }
+    #hero{
+        height:220px;
+        width:100%;
+        margin:0 auto;
+        background-image:linear-gradient(135deg, #f71, #c1e, #71a);
+        clear:both;
+    }
+    h1{
+        font-size:300%;
+        width:65%;
+        margin:0 auto;
+        padding:0;
+        color:white;
+    }
+    /* success div styles */
+    #success{
+        position:absolute;
+        right:17.25%;
+        background-color:white;
+    }
+    .welcome-logout{
+        float:right;
+    }
+    header{
+        width:65%;
+        margin:0 auto;
+    }
+    /* navigation styles */
+    div#menuIcon{
+        display:none;
+    }
+    nav{
+        margin: 0 auto;
+    }
+    nav ul{
+        list-style-type: none;
+    }
+    nav ul.menu{
+        display:block;
+    }
+    nav li{
+        float:left;
+        padding:15px 40px 15px 0;
+    }
+    nav li.current{
+        background-color:red;
+    }
+    li#meniIcon{
+        display:none;
+    }
+    main{
+        width:65%;
+        float:left;
+    }
+    aside{
+        width:35%;
+        float:right;
+    }
+    footer{
+        clear:both;
+        margin:100px 0;
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+    }
 }

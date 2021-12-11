@@ -31,8 +31,6 @@ if(defined('DEBUG') && DEBUG)
 // create a function for navigation so that header.php can call nav function
 $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
-$nav['login.php'] = 'Login';
-$nav['register.php'] = 'Register';
 $nav['contact.php'] = 'Contact';
 $nav['movies.php'] = 'Movies';
 $nav['movie-view.php'] = 'Movie Details';
@@ -42,11 +40,9 @@ function create_nav($nav){
     $nav_list = '';
     foreach($nav as $key => $value){
         if(THIS_PAGE == $key){
-            $nav_list .= '<li class="current"><a href= "'.$key.'">'.$value.'</a></li>';
-        }elseif($key == 'login.php' || $key == 'register.php'){
-            $nav_list .= '';
+            $nav_list .= '<li class="current menuItem"><a href= "'.$key.'">'.$value.'</a></li>';
         }else{
-            $nav_list .= '<li><a href="'.$key.'">'.$value.'</a></li>';
+            $nav_list .= '<li class="menuItem"><a href="'.$key.'">'.$value.'</a></li>';
         }
     }
     return $nav_list;

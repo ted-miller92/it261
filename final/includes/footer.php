@@ -17,5 +17,6 @@
             <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $currentURL?>">CSS Validation</a>
             </p>
     </footer>
+    <script src="includes/nav.js"></script>
 </body>
 </html>

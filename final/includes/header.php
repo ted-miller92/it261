@@ -46,15 +46,16 @@ if(isset($_GET['logout'])){
         <?php
         if(isset($_SESSION['username'])) : ?>
             <div class="welcome-logout">
-                <h3>
+                <h4>
                     <?php echo htmlspecialchars($_SESSION['username']);?>
-                </h3>
-                <p> <a href="index.php?logout='1' ">Log Out</a></p>
+                </h4>
+                <p><a href="index.php?logout='1' ">Log Out</a></p>
             </div> <!-- end logout/welcome div -->
         <?php endif ;?>
         <!-- end logut/welcome messages -->
+        <div id="menuIcon" onClick="hideMenu()" >Icon</div>
         <nav>
-            <ul>
+            <ul id="menu" class ="menu">
                 <?php echo create_nav($nav); ?>
             </ul>
         </nav>
