@@ -10,7 +10,7 @@ html{
 }
 h3, h5{
     padding:7px 2px;
-    font-size:1.2em;
+    font-size:1.5em;
 }
 p{
     padding:2px;
@@ -28,6 +28,18 @@ a:hover{
 ul{
     list-style-type:none;
     padding:5px 0;
+}
+.purple{
+    padding:10px;
+    background-image: linear-gradient(135deg, rgba(119, 17, 170, 0.1), rgba(119, 17, 170, 0.4))
+}
+.orange{
+    padding:10px;
+    background-image: linear-gradient(135deg, rgba(255, 120, 17, 0.1), rgba(255, 120, 17, 0.4));
+}
+.purpleOrange{
+    padding:10px;
+    background-image: linear-gradient(135deg, rgba(119, 17, 170, 0.1), rgba(255, 120, 17, 0.4));
 }
 /*****************/
 /* Mobile Styles */
@@ -266,6 +278,35 @@ footer p, a{
         width:35%;
         float:right;
         padding:10px;
+    }
+    .gridContainer{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .orange{
+        margin:10px;
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end:2;
+        border-radius:10px;
+    }
+    .purpleOrange{
+        margin:10px;
+        grid-column-start:2;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+        border-radius:10px;
+    }
+    .purple{
+        margin:10px;
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:3;
+        grid-row-end:4;
+        border-radius:10px;
     }
     footer{
         clear:both;
