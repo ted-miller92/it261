@@ -8,37 +8,71 @@
 /*****************/
 /* Mobile Styles */
 /*****************/
-@media all and (max-width:899px){
-    div.movieSegment{
-        width:100%;
-        padding:10px;
-        margin:2px 0;
-    }
+div.movieSegment{
+    display:flex;
+    width:100%;
+    padding:10px;
+    margin:2px 0;
+    justify-content:flex-start;
+}
+#movieImage{
+    width:45%;
+    height:20%;
+    object-fit:cover;
+    padding:10px;
+}
+#movieInfo{
+    width:53%;
+    
+    padding:10px;
 }
 
 /*****************/
 /* Tablet Styles */
 /*****************/
-@media all 
-and (min-width: 900px) 
-and (max-width: 1199px) {
+@media screen and (min-width: 450px) and (max-width: 1023px) {
     div.movieSegment{
+        display:flex;
         width:100%;
-        margin:10px;
         padding:10px;
+        margin:10px;
         border-radius:10px;
+        height:max-content;
+        justify-content:flex-start;
+    }
+    #movieImage{
+        width:30%;
+        height:30%;
+        object-fit:cover;
+        padding:10px;
+    }
+    #movieInfo{
+        width:70%;
+        padding:10px;
     }
 }
 
 /*****************/
 /* Desktop Styles*/
 /*****************/
-@media all and (min-width: 1200px){
+@media screen and (min-width: 1024px){
     div.movieSegment{
+        display:flex;
         width:100%;
-        margin:10px;
         padding:10px;
-        
+        margin:10px;
         border-radius:10px;
+        height:max-content;
+        justify-content:flex-start;
+    }
+    #movieImage{
+        width:20%;
+        height:20%;
+        object-fit:cover;
+        padding:10px;
+    }
+    #movieInfo{
+        width:80%;
+        padding:10px;
     }
 }   

@@ -2,51 +2,82 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
-h3{
-    padding:2px;
+html{
+    overflow-x: hidden;
+    width: 100vw;
 }
-h5{
-    padding:2px;
+h3, h5{
+    padding:7px 2px;
+    font-size:1.2em;
 }
 p{
     padding:2px;
+    font-size:21px;
+    line-height:1.5;
 }
+a{
+    color:#71a;
+    transition:color 0.2s linear;
+}
+a:hover{
+    color:#c1e;
+    transition:color 0.2s linear;
+}
+ul{
+    list-style-type:none;
+    padding:5px 0;
+}
+
 /*****************/
 /* Mobile Styles */
 /*****************/
-@media all and (max-width: 899px){
+
     #wrapper{
         width:100%;
         margin:0 auto;
     }
     #hero{
-        height:80px;
+        position:relative;
+        height:30vh;
         width:100%;
         margin: 0 auto;
         background-image:linear-gradient(135deg, #f71, #c1e, #71a);
         clear:both;
     }
     h1{
-        font-size: 200%;
-        margin: 0 auto;
+        font-family:'Lobster', sans-serif;
+        position:absolute;
+        font-size: 350%;
+        bottom:0;
         padding: 0;
         color:white;
     }
     /* success div styles */
-    #success{
+    #success, .welcome-logout{
         position:absolute;
-        right:0;
+        margin:7.5px 7.5px;
+        width:max-content;
         background-color:white;
+        border-radius:6px;
+        padding:2px;
+        right:7.5px;
     }
-    .welcome-logout{
-        float:right;
+    .welcome-logout a{
+        color:#71a;
+        transition:color 0.2s linear;
+    }
+    .welcome-logout a:hover{
+        color:#c1e;
+        transition:color 0.2s linear;
     }
      /* navigation styles */
     div#menuIcon{
         display:block;
-        padding:15px 40px 15px 0;
+        padding:15px 40px 15px 15px;
+        color:white;
+        font-size:200%;
     }
     nav{
         margin: 0 auto;
@@ -57,26 +88,37 @@ p{
     nav ul.visible{
         display:block;
         position:absolute;
+        z-index:10;
         width:100%;
+        background-image:linear-gradient(105deg, #f71, #c1e, #71a);
     }
     nav ul.visible{
         list-style-type: none;
     }
     nav li{
-        padding:15px 40px 15px 0;
-        background-color:white;
+        padding:30px 40px 30px 30px;
     }
-    nav li.current{
-        background-color:red;
+    nav li a{
+        color:white;
+        text-decoration: none;
+        transition: color 0.2s linear;
+    }
+    nav li a:hover{
+        color:#71a;
+        text-decoration:underline;
+        transition: color 0.2s linear;
+    }
+    nav li.current a{
+        text-decoration: underline;
     }
     
     /* end nav styles */
-}
+
 
 /*****************/
 /* Tablet Styles */
 /*****************/
-@media all and (min-width: 900px)
+@media screen and (min-width: 450px) and (max-width: 1023px)
 {
     #wrapper{
         width:100%;
@@ -90,20 +132,14 @@ p{
         clear:both;
     }
     h1{
-        font-size:300%;
-        margin:0 auto;
-        padding:0;
+        position:absolute;
+        font-size: 350%;
+        bottom:0;
+        padding: 0;
         color:white;
     }
     /* success div styles */
-    #success{
-        position:absolute;
-        right:0;
-        background-color:white;
-    }
-    .welcome-logout{
-        float:right;
-    }
+    /* same as mobile */
     header{
         width:100%;
         margin:0 auto;
@@ -111,7 +147,7 @@ p{
     /* navigation styles */
     div#menuIcon{
         display:block;
-        padding:15px 40px 15px 0;
+        padding:15px 40px 15px 15px;
     }
     nav{
         margin: 0 auto;
@@ -127,19 +163,14 @@ p{
     nav ul.visible{
         list-style-type: none;
     }
-    nav li{
-        padding:15px 40px 15px 0;
-        background-color:white;
-    }
-    nav li.current{
-        background-color:red;
-    }
     /* end nav styles */
     main{
+        padding:10px;
         width:65%;
         float:left;
     }
     aside{
+        padding:10px;
         width:35%;
         float:right;
     }
@@ -155,10 +186,13 @@ p{
 /*****************/
 /* Desktop Styles*/
 /*****************/
-@media all and (min-width: 1200px){
+@media screen and (min-width: 1023px){
     #wrapper{
         width:65%;
         margin:0 auto;
+    }
+    header{
+        width:100%;
     }
     #hero{
         height:220px;
@@ -168,30 +202,29 @@ p{
         clear:both;
     }
     h1{
-        font-size:300%;
-        width:65%;
-        margin:0 auto;
-        padding:0;
+        position:absolute;
+        font-size: 500%;
+        bottom:0;
+        padding: 0;
         color:white;
+        left: 17.5%;
     }
     /* success div styles */
-    #success{
+    #success, .welcome-logout{
         position:absolute;
-        right:17.25%;
+        margin:7.5px 0;
+        width:max-content;
         background-color:white;
-    }
-    .welcome-logout{
-        float:right;
-    }
-    header{
-        width:65%;
-        margin:0 auto;
+        border-radius:6px;
+        padding:2px;
+        right:17.5%;
     }
     /* navigation styles */
     div#menuIcon{
         display:none;
     }
     nav{
+        width:65%;
         margin: 0 auto;
     }
     nav ul{
@@ -204,19 +237,18 @@ p{
         float:left;
         padding:15px 40px 15px 0;
     }
-    nav li.current{
-        background-color:red;
-    }
     li#meniIcon{
         display:none;
     }
     main{
         width:65%;
+        padding:10px;
         float:left;
     }
     aside{
         width:35%;
         float:right;
+        padding:10px;
     }
     footer{
         clear:both;

@@ -27,6 +27,7 @@
                 $movie_year = stripslashes($row['movie_year']);
                 $movie_synopsis = stripslashes($row['movie_synopsis']);
                 $movie_length = stripslashes($row['movie_length']);
+                $movie_quote = stripslashes($row['movie_quote']);
                 $feedback = '';
             }//end while
         }else {
@@ -35,9 +36,7 @@
 ?>
 <div id="wrapper">
     <main>
-        
         <?php
-
         if($feedback == ''){
             $classColor = '';
             if($movie_id % 2 == 0){
@@ -45,17 +44,29 @@
             } else {
                 $classColor = 'orange';
             }
+
             echo '<div class="movieView '.$classColor.'">';
                 echo '<h3>'.$movie_name.'</h3>';
-                echo '<h5>'.$movie_director.'</h5>';
+                echo '<p>'.$movie_director.'</p>';
                 echo '<p>'.$movie_genre.'</p>';
                 echo '<p>'.$movie_year.'</p>';
+                echo '<p>'.$movie_length.' minutes</p>';
                 echo '<p>'.$movie_synopsis.'</p>';
-                echo '<p>Runtime: '.$movie_length.' minutes</p>';
+                
             echo '</div><!-- end movieViewDiv-->';
         }
         ?>
-        
     </main>
+    <aside>
+        <div id="movieAside">
+            <?php
+            $movieStill = str_replace(' ', '_', $movie_name) . '_still' . '.jpg';
+            ?>
+            <div id="photoWrapper">
+                <img src="images/stills/<?php echo $movieStill; ?>" alt="<?php echo $movie_name; ?>">
+            </div><!-- end photoWrapper -->
+            <p>"<?php echo $movie_quote;?>"</p>
+        </div><!-- end movieAside -->
+    </aside>
 </div><!-- end wrapper -->
 <?php include('includes/footer.php'); ?>

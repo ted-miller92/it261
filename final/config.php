@@ -33,8 +33,7 @@ $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
 $nav['contact.php'] = 'Contact';
 $nav['movies.php'] = 'Movies';
-$nav['movie-view.php'] = 'Movie Details';
-$nav['director-of-the-day.php'] = 'Director of the Day';
+$nav['director-of-the-day.php'] = 'Directors';
 
 function create_nav($nav){
     $nav_list = '';
@@ -74,7 +73,7 @@ switch(THIS_PAGE){
     case 'contact.php':
         $title = 'Contact Movie Club';
         $body_class = 'contact';
-        $headline = 'Contact Movie Club';
+        $headline = 'Send us a Suggestion';
         break;
     case 'movies.php':
         $title = 'Movie List';

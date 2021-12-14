@@ -23,11 +23,17 @@
                 } else {
                     $classColor = 'orange';
                 }
+                
+                $moviePhoto = str_replace(' ', '_', $row['movie_name']);
+
                 echo '<div class="movieSegment '.$classColor.'">';
-                
-                echo '<h5><a href="movie-view.php?id='.$row['movie_id'].' ">'.$row['movie_name'].'</a></h5>';
-                echo '<p>'.$row['movie_year'].'</p>';
-                
+                echo '<img id="movieImage" src="images/movies/'.$moviePhoto.'.jpg" alt="'.$moviePhoto.'"/>';
+                echo '<div id="movieInfo">';
+                    echo '<h3><a href="movie-view.php?id='.$row['movie_id'].' ">'.$row['movie_name'].'</a></h3>';
+                    echo '<p>'.$row['movie_year'].'</p>';
+                    echo '<p><i>'.$row['movie_director'].'</i></p>';
+                    echo '<p>'.$row['movie_genre'].'</p>';
+                echo '</div>';
                 echo '</div>'; //end .peopleSegment
             }//end while
         }else{
