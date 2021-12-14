@@ -75,6 +75,6 @@ if(isset($_GET['logout'])){
             </ul>
         </nav>
 
-        <a href="index.php"><h1>Movie Club</h1></a>
+        <a href="index.php"><h1><?php echo $headline; ?></h1></a>
     </div><!-- end hero -->
 </header>

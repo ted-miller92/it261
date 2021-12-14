@@ -78,7 +78,7 @@ switch(THIS_PAGE){
     case 'movies.php':
         $title = 'Movie List';
         $body_class = 'movies';
-        $headline = 'Our Movie List';
+        $headline = 'Movie List';
         break;
     case 'movie-view.php':
         $title = 'Details for '.$movie.'';
