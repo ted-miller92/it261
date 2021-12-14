@@ -32,51 +32,49 @@ if(isset($_GET['logout'])){
 <body>
     <header>
     <div id="hero">
-        
         <!-- begin logout/welcome message -->
-        <!-- begin username/logout div -->
-        <?php
-        if(isset($_SESSION['username'])) : ?>
-            <div class="welcome-logout">
-                <h3>
-                    <?php echo htmlspecialchars($_SESSION['username']);?>
-                </h3>
-                <p><a href="index.php?logout='1' ">Log Out</a></p>
-            </div> <!-- end logout/welcome div -->
-        <?php endif ;?>
-        <!-- end username/logout div -->
+            <!-- begin username/logout div -->
+            <?php
+            if(isset($_SESSION['username'])) : ?>
+                <div class="welcome-logout">
+                    <p><?php echo htmlspecialchars($_SESSION['username']);?></p>
+                    <a href="index.php?logout='1' ">Log Out</a>
+                </div> <!-- end logout/welcome div -->
+            <?php endif ;?>
+            <!-- end username/logout div -->
         
-        <!-- begin success div -->
-        <?php if(isset($_SESSION['success'])) : ?>
-        <div id="success">
-            <h3>
-                <?php echo $_SESSION['success'];
-                unset($_SESSION['success']);
-                ?>
-            </h3>
-            <p><a href="index.php?logout='1' ">Log Out</a></p>
-        </div><!-- end div success -->
-        <script type="text/javascript">
-            // close the succes div in 5 secs
-            window.setTimeout("closeSuccessDiv();", 5000);
-
-            function closeSuccessDiv(){
-            document.getElementById("success").style.display=" none";
-            }
-        </script>
-        <?php endif ; ?>
-        <!-- end success div -->
+            <!-- begin success div -->
+            <?php if(isset($_SESSION['success'])) : ?>
+            <div id="success">
+                <h3><?php
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                    ?>
+                </h3>
+                <a href="index.php?logout='1' ">Log Out</a>
+            </div><!-- end div success -->
+            <script type="text/javascript">
+                // close the succes div in 5 secs
+                window.setTimeout("closeSuccessDiv();", 5000);
+                function closeSuccessDiv(){
+                document.getElementById("success").style.display=" none";
+                }
+            </script>
+            <?php endif ; ?>
+            <!-- end success div -->
         <!-- end logut/welcome messages -->
+
         <div id="menuIcon" onClick="hideMenu()" >
             <i class="fa fa-fw fa-bars"></i>
         </div>
         <nav>
             <ul id="menu" class ="menu">
-                <?php echo create_nav($nav); ?>
+                <?php 
+                echo create_nav($nav); 
+                ?>
             </ul>
         </nav>
 
         <a href="index.php"><h1>Movie Club</h1></a>
-        </div><!-- end hero -->
-    </header>
-        
+    </div><!-- end hero -->
+</header>

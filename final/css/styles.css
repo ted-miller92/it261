@@ -29,90 +29,107 @@ ul{
     list-style-type:none;
     padding:5px 0;
 }
-
 /*****************/
 /* Mobile Styles */
 /*****************/
 
-    #wrapper{
-        width:100%;
-        margin:0 auto;
-    }
-    #hero{
-        position:relative;
-        height:30vh;
-        width:100%;
-        margin: 0 auto;
-        background-image:linear-gradient(135deg, #f71, #c1e, #71a);
-        clear:both;
-    }
-    h1{
-        font-family:'Lobster', sans-serif;
-        position:absolute;
-        font-size: 350%;
-        bottom:0;
-        padding: 0;
-        color:white;
-    }
-    /* success div styles */
-    #success, .welcome-logout{
-        position:absolute;
-        margin:7.5px 7.5px;
-        width:max-content;
-        background-color:white;
-        border-radius:6px;
-        padding:2px;
-        right:7.5px;
-    }
-    .welcome-logout a{
-        color:#71a;
-        transition:color 0.2s linear;
-    }
-    .welcome-logout a:hover{
-        color:#c1e;
-        transition:color 0.2s linear;
-    }
-     /* navigation styles */
-    div#menuIcon{
-        display:block;
-        padding:15px 40px 15px 15px;
-        color:white;
-        font-size:200%;
-    }
-    nav{
-        margin: 0 auto;
-    }
-    nav ul.menu{
-        display:none;
-    }
-    nav ul.visible{
-        display:block;
-        position:absolute;
-        z-index:10;
-        width:100%;
-        background-image:linear-gradient(105deg, #f71, #c1e, #71a);
-    }
-    nav ul.visible{
-        list-style-type: none;
-    }
-    nav li{
-        padding:30px 40px 30px 30px;
-    }
-    nav li a{
-        color:white;
-        text-decoration: none;
-        transition: color 0.2s linear;
-    }
-    nav li a:hover{
-        color:#71a;
-        text-decoration:underline;
-        transition: color 0.2s linear;
-    }
-    nav li.current a{
-        text-decoration: underline;
-    }
+#wrapper{
+    width:100%;
+    margin:0 auto;
+    min-height:90vh;
+}
+#hero{
+    position:relative;
+    height:30vh;
+    width:100%;
+    margin: 0 auto;
+    background-image:linear-gradient(135deg, #f71, #c1e, #71a);
+    clear:both;
+}
+h1{
+    font-family:'Lobster', sans-serif;
+    position:absolute;
+    font-size: 350%;
+    bottom:0;
+    padding: 0;
+    color:white;
+}
+/* success div styles */
+#success, .welcome-logout{
+    position:absolute;
+    margin:15px 7.5px;
+    width:100px;
+    background-color:white;
+    border-radius:6px;
+    padding:2px;
+    right:7.5px;
     
-    /* end nav styles */
+}
+#success p, .welcome-logout p{
+    font-size:1em;
+}
+.welcome-logout a{
+    color:#71a;
+    transition:color 0.2s linear;
+}
+.welcome-logout a:hover{
+    color:#c1e;
+    transition:color 0.2s linear;
+}
+    /* navigation styles */
+div#menuIcon{
+    display:block;
+    padding:15px 40px 15px 15px;
+    color:white;
+    font-size:200%;
+}
+nav{
+    margin: 0 auto;
+}
+nav ul.menu{
+    display:none;
+}
+nav ul.visible{
+    display:block;
+    position:absolute;
+    z-index:10;
+    width:100%;
+    background-image:linear-gradient(105deg, #f71, #c1e, #71a);
+}
+nav ul.visible{
+    list-style-type: none;
+}
+nav li{
+    padding:30px 40px 30px 30px;
+}
+nav li a{
+    color:white;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+nav li a:hover{
+    color:#71a;
+    text-decoration:underline;
+    transition: color 0.2s linear;
+}
+nav li.current a{
+    text-decoration: underline;
+}
+
+/* end nav styles */
+
+footer{
+    min-height:100px;
+    background-image:linear-gradient(105deg, rgba(255, 120, 17, 0.2), rgba(205, 17, 238, 0.2), rgba(119, 17, 170, 0.2));
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+footer p, a{
+    padding:2px 0;
+
+}
+
 
 
 /*****************/
@@ -212,8 +229,8 @@ ul{
     /* success div styles */
     #success, .welcome-logout{
         position:absolute;
-        margin:7.5px 0;
-        width:max-content;
+        margin:15px 0;
+        width:100px;
         background-color:white;
         border-radius:6px;
         padding:2px;

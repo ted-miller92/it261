@@ -87,20 +87,23 @@ switch($today){
 ?>
 <link rel="stylesheet" href="css/directors.css" type="text/css">
 <div id="wrapper">
+    <h3><?php echo $today;?> is <?php echo $director;?> Day</h3>
     <aside>
         <div id="photoWrapper">
             <img id="directorPhoto" src="<?php echo $photo;?>" alt="<?php echo $director; ?>">
         </div>
-    </aside>
-    <main>
-        <h3><?php echo $today;?> is <?php echo $director;?> Day</h3>
-        <p><?php echo $bio;?></p>
         <h5>Movies by <?php echo $director; ?></h5>
         <ul>
             <?php foreach($movies_array as $movie): ?>
                 <li><?php echo $movie;?></li>
             <?php endforeach;?>
         </ul>
+    </aside>
+    <main>
+        
+        <p><?php echo $bio;?></p>
+        
+        
     </main>
     
 </div>

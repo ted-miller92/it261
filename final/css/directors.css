@@ -11,11 +11,6 @@ img#directorPhoto{
     width:200px;
     margin:0 auto;
 }
-
-li{
-    font-size:1.2em;
-    padding:2px;
-}
 /* tablet */
 @media all and (min-width: 450px) and (max-width: 1023px){
 
