@@ -133,6 +133,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <?php include('includes/header.php');?>
 <link rel="stylesheet" href="css/form.css" type="text/css">
 <div id="wrapper">
+<h2><?php echo $headline; ?></h2>
     <main>
         <h3>Contact Us</h3>
         <p>Do you have a movie you would like us to include in our list?</p>

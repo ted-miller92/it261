@@ -11,13 +11,13 @@
                 </a>
             </div>
             <div class="purpleOrange">
-                <a href="movies.php">
+                <a href="director-of-the-day.php">
                     <h5>See the Director of the Day</h5>
                     <img src="images/directors_screenshot.png" alt="movies screenshot">
                 </a>
             </div>
             <div class="purple">
-                <a href="movies.php">
+                <a href="contact.php">
                     <h5>Contact us!</h5>
                     <img src="images/contact_screenshot.png" alt="movies screenshot">
                 </a>

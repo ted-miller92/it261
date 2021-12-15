@@ -87,6 +87,7 @@ switch($today){
 ?>
 <link rel="stylesheet" href="css/directors.css" type="text/css">
 <div id="wrapper">
+    <h2><?php echo $headline; ?></h2>
     <h3><?php echo $today;?> is <?php echo $director;?> Day</h3>
     <aside>
         <div id="photoWrapper">

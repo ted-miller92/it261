@@ -1,4 +1,4 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.php');?>
 <link rel="stylesheet" href="css/movie-view.css" type="text/css">
 <?php 
 
@@ -29,14 +29,19 @@
                 $movie_length = stripslashes($row['movie_length']);
                 $movie_quote = stripslashes($row['movie_quote']);
                 $feedback = '';
+                $title = 'Details for '.$movie_name.'';
             }//end while
         }else {
             $feedback = 'Something is not working.';
         }
+        
 ?>
+
 <div id="wrapper">
+<h2><?php echo $headline; ?></h2>
     <main>
         <?php
+
         if($feedback == ''){
             $classColor = '';
             if($movie_id % 2 == 0){
@@ -52,10 +57,11 @@
                 echo '<p>'.$movie_year.'</p>';
                 echo '<p>'.$movie_length.' minutes</p>';
                 echo '<p>'.$movie_synopsis.'</p>';
-                
+                echo '<a href="movies.php">Back to Movies</a>';
             echo '</div><!-- end movieViewDiv-->';
         }
         ?>
+        
     </main>
     <aside>
         <div id="movieAside">

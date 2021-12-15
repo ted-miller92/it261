@@ -1,6 +1,7 @@
 <?php include('includes/header.php'); ?>
 <link rel="stylesheet" href="css/movies.css" type="text/css">
 <div id="wrapper">
+    <h2><?php echo $headline; ?></h2>
     <main>
         <?php
         // assign SQL query to $sql variable

@@ -81,9 +81,9 @@ switch(THIS_PAGE){
         $headline = 'Movie List';
         break;
     case 'movie-view.php':
-        $title = 'Details for '.$movie.'';
+        $title = 'Movie Details';
         $body_class = 'movie-view';
-        $headline = 'Details for '.$movie.'';
+        $headline = 'Movie Details';
         break;
     case 'director-of-the-day.php':
         $title = 'Director of the Day';
@@ -91,4 +91,3 @@ switch(THIS_PAGE){
         $headline = 'Director of the Day';
         break;
 }
-

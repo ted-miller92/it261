@@ -46,11 +46,11 @@ if(isset($_GET['logout'])){
             <!-- begin success div -->
             <?php if(isset($_SESSION['success'])) : ?>
             <div id="success">
-                <h3><?php
+                <p><?php
                     echo $_SESSION['success'];
                     unset($_SESSION['success']);
                     ?>
-                </h3>
+                </p>
                 <a href="index.php?logout='1' ">Log Out</a>
             </div><!-- end div success -->
             <script type="text/javascript">
@@ -75,6 +75,6 @@ if(isset($_GET['logout'])){
             </ul>
         </nav>
 
-        <a href="index.php"><h1><?php echo $headline; ?></h1></a>
+        <a href="index.php"><h1>Movie Club</h1></a>
     </div><!-- end hero -->
 </header>
