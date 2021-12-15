@@ -105,8 +105,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_POST['synopsis'],
     $_POST['privacy']
         )){
-            $to = 'ted.miller92@gmail.com';
-            $subject = 'Form test from form1.php' .date('m/d/y') ;
+            $to = 'szemeo@mystudentswa.com'; // changed to Olga's email for grading purposes
+            $subject = 'Test from Ted Miller contact.php' .date('m/d/y') ;
             $body = '
             First name: '.$first_name.' '.PHP_EOL.'
             Movie name: '.$movie_name.' '.PHP_EOL.'
